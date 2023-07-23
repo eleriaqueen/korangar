@@ -155,6 +155,36 @@ fn get_sprite_path_for_player_job(job_id: usize) -> &'static str {
         4190 => "½´ÆÛ³ëºñ½º",   // SUPERNOVICE2
         4211 => "KAGEROU",      // KAGEROU
         4212 => "OBORO",        // OBORO
+        4252 => "DRAGON_KNIGHT",            // DRAGON KNIGHT
+        4253 => "MEISTER",                  // MEISTER
+        4254 => "SHADOW_CROSS",             // SHADOW CROSS
+        4255 => "ARCH_MAGE",                // ARCH MAGE
+        4256 => "CARDINAL",                 // CARDINAL
+        4257 => "WINDHAWK",                 // WINDHAWK
+        4258 => "IMPERIAL_GUARD" ,          // IMPERIAL GUARD
+        4259 => "BIOLO",                    // BIOLO
+        4260 => "ABYSS_CHASER",             // ABYSS CHASER
+        4261 => "ELEMENTAL_MASTER",         // ELEMENTAL MASTER
+        4262 => "INQUISITOR",               // INQUISITOR
+        4263 => "TROUBADOUR",               // TROUBADOUR
+        4264 => "TROUVERE",                 // TROUVERE
+        /*4265 => "DRAGON_KNIGHT_RIDING",     // DRAGON KNIGHT RIDING
+        4266 => "MEISTER_RIDING",           // MEISTER RIDING
+        4267 => "SHADOW_CROSS_RIDING",      // SHADOW CROSS RIDING
+        4268 => "ARCH_MAGE_RIDING",         // ARCH MAGE RIDING
+        4269 => "CARDINAL_RIDING",          // CARDINAL RIDING
+        4270 => "WINDHAWK_RIDING",          // WINDHAWK RIDING
+        4271 => "IMPERIAL_GUARD_RIDING",    // IMPERIAL GUARD RIDING
+        4272 => "BIOLO_RIDING",             // BIOLO RIDING
+        4273 => "ABYSS_CHASER_RIDING" ,     // ABYSS CHASER RIDING
+        4274 => "ELEMETAL_MASTER_RIDING",   // ELEMENTAL MASTER RIDING
+        4275 => "INQUISITOR_RIDING",        // INQUISITOR RIDING
+        4276 => "TROUBADOUR_RIDING",        // TROUBADOUR RIDING
+        4277 => "TROUVERE_RIDING",          // TROUVERE RIDING
+        4278 => "WOLF_WINDHAWK",            // WOLF WINDHAWK
+        4279 => "MEISTER_MADOGEAR1",        // MEISTER MADOGEAR 1
+        4280 => "DRAGON_KNIGHT_CHICKEN",    // DRAGON KNGHT CHICKEN
+        4281 => "IMPERIAL_GUARD_CHICKEN",   // IMPERIAL GUARD CHICKEN*/
         _ => "ÃÊº¸ÀÚ",          // NOVICE
     }
 }

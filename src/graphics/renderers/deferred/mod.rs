@@ -83,6 +83,7 @@ pub struct DeferredRenderer {
     #[cfg(feature = "debug")]
     tile_textures: [Texture; 7],
     font_map: Texture,
+    dmg_font_map: Texture,
     walk_indicator: Texture,
     dimensions: [u32; 2],
 }
@@ -175,6 +176,7 @@ impl DeferredRenderer {
         let box_renderer = BoxRenderer::new(memory_allocator.clone(), lighting_subpass, viewport);
 
         let font_map = texture_loader.get("font.png", game_file_loader).unwrap();
+        let dmg_font_map = texture_loader.get("dmg_font.png", game_file_loader).unwrap();
         let walk_indicator = texture_loader.get("grid.tga", game_file_loader).unwrap();
 
         #[cfg(feature = "debug")]
@@ -210,6 +212,7 @@ impl DeferredRenderer {
             #[cfg(feature = "debug")]
             tile_textures,
             font_map,
+            dmg_font_map,
             walk_indicator,
             dimensions,
         }
@@ -356,6 +359,35 @@ impl DeferredRenderer {
             self.sprite_renderer.render_indexed(
                 render_target,
                 self.font_map.clone(),
+                window_size,
+                position,
+                Vector2::new(font_size, font_size),
+                color,
+                10,
+                index,
+                true,
+            );
+            position.x += font_size / 2.0;
+        }
+    }
+
+    pub fn render_dmg_text(
+        &self,
+        render_target: &mut <Self as Renderer>::Target,
+        text: &str,
+        mut position: Vector2<f32>,
+        color: Color,
+        font_size: f32,
+    ) {
+        let window_size = Vector2::new(self.dimensions[0] as usize, self.dimensions[1] as usize);
+
+        render_target.unbind_subrenderer();
+
+        for character in text.as_bytes() {
+            let index = (*character as usize).saturating_sub(31);
+            self.sprite_renderer.render_indexed(
+                render_target,
+                self.dmg_font_map.clone(),
                 window_size,
                 position,
                 Vector2::new(font_size, font_size),

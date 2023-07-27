@@ -367,7 +367,7 @@ impl DeferredRenderer {
                 index,
                 true,
             );
-            position.x += font_size / 2.0;
+            position.x += font_size * 0.5 + font_size / 6.0;
         }
     }
 

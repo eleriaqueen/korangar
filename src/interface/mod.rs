@@ -399,15 +399,15 @@ impl Interface {
         text: &str,
         mouse_position: Position,
     ) {
-        let offset = Vector2::new(text.len() as f32 * -3.0, 20.0);
+        let offset = Vector2::new(text.len() as f32 * -6.2, 25.0);
         renderer.render_text(
             render_target,
             text,
             mouse_position + offset + Vector2::new(1.0, 1.0),
             Color::monochrome(0),
-            12.0,
+            18.0,
         ); // move variables into theme
-        renderer.render_text(render_target, text, mouse_position + offset, Color::monochrome(255), 12.0); // move variables into theme
+        renderer.render_text(render_target, text, mouse_position + offset, Color::monochrome(255), 18.0); // move variables into theme
     }
 
     #[profile]

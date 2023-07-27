@@ -26,19 +26,19 @@ pub trait Particle {
 pub struct DamageNumber {
     position: Vector3<f32>,
     damage_amount: String,
-    #[new(value = "50.0")]
+    #[new(value = "95.0")]
     velocity_y: f32,
-    #[new(value = "thread_rng().gen_range(-20.0..20.0)")]
+    #[new(value = "thread_rng().gen_range(10.0..18.0)")]
     velocity_x: f32,
-    #[new(value = "thread_rng().gen_range(-20.0..20.0)")]
+    #[new(value = "0.0")]
     velocity_z: f32,
-    #[new(value = "0.6")]
+    #[new(value = "1.25")]
     timer: f32,
 }
 
 impl Particle for DamageNumber {
     fn update(&mut self, delta_time: f32) -> bool {
-        self.velocity_y -= 200.0 * delta_time;
+        self.velocity_y -= 180.0 * delta_time;
 
         self.position.y += self.velocity_y * delta_time;
         self.position.x += self.velocity_x * delta_time;
@@ -59,12 +59,12 @@ impl Particle for DamageNumber {
         let clip_space_position = (projection_matrix * view_matrix) * self.position.extend(1.0);
         let screen_position = Vector2::new(
             clip_space_position.x / clip_space_position.w + 1.0,
-            clip_space_position.y / clip_space_position.w + 1.0,
+            clip_space_position.y / clip_space_position.w + 0.90,
         );
         let screen_position = screen_position / 2.0;
         let final_position = Vector2::new(screen_position.x * window_size.x, screen_position.y * window_size.y);
 
-        renderer.render_text(render_target, &self.damage_amount, final_position, Color::monochrome(255), 16.0);
+        renderer.render_text(render_target, &self.damage_amount, final_position, Color::monochrome(255), 36.0);
     }
 }
 

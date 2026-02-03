@@ -342,6 +342,8 @@ fn get_sprite_path_for_player_job(job_id: usize) -> &'static str {
         4211 => "KAGEROU",         // KAGEROU
         4212 => "OBORO",           // OBORO
         4215 => "REBELLION",       // REBELLION
+        4218 => "SUMMONER",        // SUMMONER
+        4220 => "SUMMONER",        // SUMMONER_B
         4222 => "닌자",            // NINJA_B
         4223 => "KAGEROU",         // KAGEROU_B
         4224 => "OBORO",           // OBORO_B
@@ -373,6 +375,7 @@ fn get_sprite_path_for_player_job(job_id: usize) -> &'static str {
         4305 => "SHIRANUI",        // SHIRANUI
         4306 => "NIGHT_WATCH",     // NIGHT WATCH
         4307 => "HYPER_NOVICE",    // HYPER NOVICE
+        4308 => "SPIRIT_HANDLER",  // SPIRIT HANDLER
         _ => "초보자",             // NOVICE,
     }
 }

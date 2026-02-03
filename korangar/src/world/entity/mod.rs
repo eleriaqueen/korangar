@@ -254,6 +254,11 @@ fn get_sprite_path_for_player_job(job_id: usize) -> &'static str {
         23 => "슈퍼노비스",        // SUPERNOVICE
         24 => "건너",              // GUNSLINGER
         25 => "닌자",              // NINJA
+        26 => "산타",              // SANTA
+        27 => "여름",              // SUMMER
+        28 => "한복",              // HANBOK
+        29 => "옥토버패스트",      // OKTOBERFEST
+        30 => "여름2",             // SUMMER2
         4001 => "초보자",          // NOVICE_H
         4002 => "검사",            // SWORDMAN_H
         4003 => "마법사",          // MAGICIAN_H
